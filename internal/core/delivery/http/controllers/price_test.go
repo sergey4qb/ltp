@@ -48,6 +48,7 @@ func TestGetPricesForPairs(t *testing.T) {
 
 	w := httptest.NewRecorder()
 	c, _ := gin.CreateTestContext(w)
+	gin.SetMode(gin.ReleaseMode)
 	c.Request, _ = http.NewRequest("GET", "/api/v1/ltp", nil)
 
 	controller.GetPricesForPairs(c)
@@ -90,6 +91,7 @@ func TestGetPricesForPairs_Error(t *testing.T) {
 
 	w := httptest.NewRecorder()
 	c, _ := gin.CreateTestContext(w)
+	gin.SetMode(gin.ReleaseMode)
 	c.Request, _ = http.NewRequest("GET", "/api/v1/ltp", nil)
 
 	controller.GetPricesForPairs(c)
