@@ -22,7 +22,7 @@ system in Docker containers.
 
     ```bash
     git clone https://github.com/sergey4qb/ltp.git
-    cd rate
+    cd ltp
     ```
 2. **Set Environment Variables**
 
