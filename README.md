@@ -53,8 +53,8 @@ Response:
 {
   "ltp": [
     {
-      "pair": "string",
-      "amount": "string"
+      "pair": string,
+      "amount": string
     }
   ]
 }
