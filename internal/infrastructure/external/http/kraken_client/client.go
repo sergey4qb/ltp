@@ -9,8 +9,7 @@ import (
 )
 
 type PublicClient struct {
-	endpoint string
-	client   http.Client
+	client http.Client
 }
 
 func NewPublicClient() *PublicClient {
