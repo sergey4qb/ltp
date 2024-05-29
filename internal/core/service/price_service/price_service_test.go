@@ -32,7 +32,11 @@ func TestGetLastTradedPrice(t *testing.T) {
 		Error:  nil,
 		Result: map[string]dto.Pair{krakenStandard: {LastTradeClosed: [2]string{exp}}},
 	}
-	mockClient.On("GetTickerInfo", ctx, "BTCUSD").Return(mockTickerInfo, nil)
+	mockClient.On(
+		"GetTickerInfo",
+		ctx,
+		"BTCUSD",
+	).Return(mockTickerInfo, nil)
 
 	price, err := service.getLastTradedPrice(ctx, pair)
 	assert.NoError(t, err)
