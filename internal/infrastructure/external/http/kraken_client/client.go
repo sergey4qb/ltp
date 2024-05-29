@@ -19,7 +19,7 @@ func NewPublicClient() *PublicClient {
 }
 
 func (c *PublicClient) GetTickerInfo(ctx context.Context, pair string) (*dto.TickerResponse, error) {
-	u, err := url.Parse(BaseUrl + PathTicker)
+	u, err := url.Parse(BaseURL + PathTicker)
 	if err != nil {
 		return nil, err
 	}
